@@ -1451,8 +1451,8 @@ Tilemap:
     m_Data: {r: 1.3e-44, g: 1.3e-44, b: 1.3e-44, a: 1.3e-44}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -7, y: -24, z: 0}
-  m_Size: {x: 21, y: 28, z: 1}
+  m_Origin: {x: -33, y: -31, z: 0}
+  m_Size: {x: 47, y: 35, z: 1}
   m_TileAnchor: {x: 1, y: 1, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1497,6 +1497,7 @@ TilemapRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

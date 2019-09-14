@@ -1,0 +1,895 @@
+fileFormatVersion: 2
+guid: 042ddf671b5fdd04ab88ad83f17e3ac2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2699252142190954287
+    second: stonetiles_outlines_64x64_trans_test_0
+  - first:
+      213: 201962895397669980
+    second: stonetiles_outlines_64x64_trans_test_1
+  - first:
+      213: 1746768029141583700
+    second: stonetiles_outlines_64x64_trans_test_2
+  - first:
+      213: -8263873364635832439
+    second: stonetiles_outlines_64x64_trans_test_3
+  - first:
+      213: -5344925410203372104
+    second: stonetiles_outlines_64x64_trans_test_4
+  - first:
+      213: 5291937606581113464
+    second: stonetiles_outlines_64x64_trans_test_5
+  - first:
+      213: -1567963425918629378
+    second: stonetiles_outlines_64x64_trans_test_6
+  - first:
+      213: 4520774787465308205
+    second: stonetiles_outlines_64x64_trans_test_7
+  - first:
+      213: 1340386649275580334
+    second: stonetiles_outlines_64x64_trans_test_8
+  - first:
+      213: 1193613018139414321
+    second: stonetiles_outlines_64x64_trans_test_9
+  - first:
+      213: -8713474759160311566
+    second: stonetiles_outlines_64x64_trans_test_10
+  - first:
+      213: -92777193880418802
+    second: stonetiles_outlines_64x64_trans_test_11
+  - first:
+      213: 4704190621400049444
+    second: stonetiles_outlines_64x64_trans_test_12
+  - first:
+      213: 4544940760283633154
+    second: stonetiles_outlines_64x64_trans_test_13
+  - first:
+      213: -5923024353067152584
+    second: stonetiles_outlines_64x64_trans_test_14
+  - first:
+      213: 2170717984086175929
+    second: stonetiles_outlines_64x64_trans_test_15
+  - first:
+      213: 341992195129909528
+    second: stonetiles_outlines_64x64_trans_test_16
+  - first:
+      213: -2461136756776487718
+    second: stonetiles_outlines_64x64_trans_test_17
+  - first:
+      213: -1588110351078708450
+    second: stonetiles_outlines_64x64_trans_test_18
+  - first:
+      213: 5959749509887698066
+    second: stonetiles_outlines_64x64_trans_test_19
+  - first:
+      213: -2288766862898924584
+    second: stonetiles_outlines_64x64_trans_test_20
+  - first:
+      213: -8607423992614859747
+    second: stonetiles_outlines_64x64_trans_test_21
+  - first:
+      213: -2294850813345372133
+    second: stonetiles_outlines_64x64_trans_test_22
+  - first:
+      213: -2249227642322053733
+    second: stonetiles_outlines_64x64_trans_test_23
+  - first:
+      213: -3281195322071628896
+    second: stonetiles_outlines_64x64_trans_test_24
+  - first:
+      213: 4807018472721948908
+    second: stonetiles_outlines_64x64_trans_test_25
+  - first:
+      213: 9041542126809743808
+    second: stonetiles_outlines_64x64_trans_test_26
+  - first:
+      213: 6289399453905444275
+    second: stonetiles_outlines_64x64_trans_test_27
+  - first:
+      213: 2983848959066277088
+    second: stonetiles_outlines_64x64_trans_test_28
+  - first:
+      213: 630945401718335016
+    second: stonetiles_outlines_64x64_trans_test_29
+  - first:
+      213: -2475248324515344628
+    second: stonetiles_outlines_64x64_trans_test_30
+  - first:
+      213: -6733639329544124494
+    second: stonetiles_outlines_64x64_trans_test_31
+  - first:
+      213: -4152316004500876007
+    second: stonetiles_outlines_64x64_trans_test_32
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e2dc15d9ac8294995941133d9bcc07
+      internalID: -2699252142190954287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89802c373e6b3b42adfe1681c130a09
+      internalID: 201962895397669980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17e809712dde524bb0c158ed7d74efe
+      internalID: 1746768029141583700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83868f3bd7ed55548943c62e08519723
+      internalID: -8263873364635832439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1e0af919dc679418c505437ba81fa2
+      internalID: -5344925410203372104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c616743ec6286348ae16c0070268d7b
+      internalID: 5291937606581113464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ace3be0f6543084e9e756847471c642
+      internalID: -1567963425918629378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 496
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7698bf776001b43a7179e85ddbe1e6
+      internalID: 4520774787465308205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 496
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298b50f7af6fa974dae4592d645bbf0d
+      internalID: 1340386649275580334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 496
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb6ce3dc7029f2499b6634fbc2e15d5
+      internalID: 1193613018139414321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 496
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eacb21344828c24496304c115868570
+      internalID: -8713474759160311566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 496
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b984f2e2e775a8478b9be6199f3102e
+      internalID: -92777193880418802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_12
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 496
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08d6ff90bcb00944bda0c412458845c
+      internalID: 4704190621400049444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_13
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 496
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f30161d2654b446a3d5a31c5e46809
+      internalID: 4544940760283633154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa71c7a65b68a9143957fb55e0a17ecc
+      internalID: -5923024353067152584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 416
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61dd618732e162646b67482989992afd
+      internalID: 2170717984086175929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 416
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed1152a1a6862e543bd42243c8b16ee9
+      internalID: 341992195129909528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_17
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 416
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31596d43d7047c24b8c329bf7a5ed7eb
+      internalID: -2461136756776487718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 416
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e4965498dffa84b9fa791589179e59
+      internalID: -1588110351078708450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 416
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225ac433fdf3afe4587f17d7c77a12db
+      internalID: 5959749509887698066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_20
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 416
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a93f3bcf13a56e4ebf8de71e8696111
+      internalID: -2288766862898924584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463b5f1e77383d04595856f59a5de8bd
+      internalID: -8607423992614859747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 336
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69ecb3823dbef34b9e6e0e292db7d14
+      internalID: -2294850813345372133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 336
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7d31f0fc3cbc54190d14381c1c3c0b
+      internalID: -2249227642322053733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 336
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d17e8fa5ba04e49a37eceebbd0a94f
+      internalID: -3281195322071628896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 336
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59c287f930dc70468fc06c9e7e3aa6b
+      internalID: 4807018472721948908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_26
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 336
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ae2fdb851380a40b7f6cf82314c858
+      internalID: 9041542126809743808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 336
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94aa9e21665d1d444bf768d345194c96
+      internalID: 6289399453905444275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae95de121bd2a34c910adae57963c39
+      internalID: 2983848959066277088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d0fd39f80630542a9b2d677fecfb1e
+      internalID: 630945401718335016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00fb81e6ec5125428c446a2fd405e28
+      internalID: -2475248324515344628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_31
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d5495a7e2e2dc44879f017789b7393
+      internalID: -6733639329544124494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stonetiles_outlines_64x64_trans_test_32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7641ebaa55c53f04f88163f7d59887dc
+      internalID: -4152316004500876007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
