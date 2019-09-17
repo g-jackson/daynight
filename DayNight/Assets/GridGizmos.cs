@@ -9,7 +9,13 @@ public class GridGizmos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Gizmos.DrawSphere(tilemap.origin, .1f);
+        
+    }
+
+    void OnDrawGizmos() {
+        if (tilemap != null) {
+            Gizmos.DrawSphere(tilemap.origin, .1f);
+        }
     }
 
     // Update is called once per frame
