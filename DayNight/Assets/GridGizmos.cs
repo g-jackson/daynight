@@ -14,7 +14,8 @@ public class GridGizmos : MonoBehaviour
 
     void OnDrawGizmos() {
         if (tilemap != null) {
-            Gizmos.DrawSphere(tilemap.origin, .1f);
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(tilemap.origin, .25f);
         }
     }
 
