@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 0ab4fcc56e8f1bf3f91172be5a2d472b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 465847720795164549
+    second: lil_wizzy_adjusted_sheet_0
+  - first:
+      213: -6860546554436735299
+    second: lil_wizzy_adjusted_sheet_1
+  - first:
+      213: -7735912906760741022
+    second: lil_wizzy_adjusted_sheet_2
+  - first:
+      213: -3097976938086242695
+    second: lil_wizzy_adjusted_sheet_3
+  - first:
+      213: -21842070094206580
+    second: lil_wizzy_adjusted_sheet_4
+  - first:
+      213: -2716014462854607313
+    second: lil_wizzy_adjusted_sheet_5
+  - first:
+      213: -5211315551987082455
+    second: lil_wizzy_adjusted_sheet_6
+  - first:
+      213: 821372772221997020
+    second: lil_wizzy_adjusted_sheet_7
+  - first:
+      213: -3719425082462198177
+    second: lil_wizzy_adjusted_sheet_8
+  - first:
+      213: 3772176244535137293
+    second: lil_wizzy_adjusted_sheet_9
+  - first:
+      213: -4780124215317214216
+    second: lil_wizzy_adjusted_sheet_10
+  - first:
+      213: 4363534283756690336
+    second: lil_wizzy_adjusted_sheet_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c85442cc2e290a6cbc23ca4ec6a0d75
+      internalID: 465847720795164549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 2
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88652b7bc1679e491be0c17ca0628251
+      internalID: -6860546554436735299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 2
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1343b003abdfd8fecbd01c8c85a7d8c9
+      internalID: -7735912906760741022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 2
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f7e45fa7c2ea57e9766c5b4449e624
+      internalID: -3097976938086242695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 2
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2177c54cf1e5590c48f2de649af57107
+      internalID: -21842070094206580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 2
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5254d75d1b9bdd3da205621fddf548d
+      internalID: -2716014462854607313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 2
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2206fd2bf7741cceb07a56ff20c6010
+      internalID: -5211315551987082455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 2
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d7c7c95aa68b3fcaf2646d33a8671e
+      internalID: 821372772221997020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 2
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec8e9e9ad0334ea1b75999432b6bec1
+      internalID: -3719425082462198177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 2
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad687679564a01c691a9a243986c550
+      internalID: 3772176244535137293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 2
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9907cf0b150d7532cb06dfc204d830ac
+      internalID: -4780124215317214216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lil_wizzy_adjusted_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 2
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12458299d0ac0640db2bf53cb1e40e51
+      internalID: 4363534283756690336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
