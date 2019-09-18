@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
     private GameObject Props;
     public Tilemap groundTilemap;
     public Tilemap propsTilemap;
+    private Vector2 direction = new Vector2(1, 0);
 
     // Use this for initialization
     void Start ()
@@ -38,7 +39,7 @@ public class Player : MonoBehaviour {
         else if(Input.GetKey("s")){
           horizontal = -1;
         }
-        else if (Input.GetKey("a")){
+        else if(Input.GetKey("a")){
           vertical = -1;
         }
         else if(Input.GetKey("d")){
@@ -58,26 +59,38 @@ public class Player : MonoBehaviour {
             StartCoroutine(actionCooldown(moveTime));
             Move(horizontal, vertical);
         }
+        else if(Input.GetKey("e")){
+            StartCoroutine(actionCooldown(moveTime));
+            Interact();
+        }
     }
 
 
-    private bool Interact()
+    private void Interact()
     {
-        return true;
+      Vector2 startCell =  transform.position;
+      Vector2 targetCell = startCell + CartesianToIsometric(direction);
+      if (getCell(propsTilemap, targetCell)){
+          print("Interacting");
+      }
+      else{
+          print("Nothing Found");
+      }
+
     }
 
 
     private void Move(int xDir, int yDir)
     {
-        Vector2 direction = new Vector2(xDir, yDir);
+        direction = new Vector2(xDir, yDir);
         Vector2 startCell =  transform.position;
         Vector2 targetCell = startCell + CartesianToIsometric(direction);
-        //print("dir:"+ xDir + yDir + "start:" + startCell + "end:" + targetCell);
+        //print("movedir:"+ xDir + yDir + "start:" + startCell + "end:" + targetCell + "new_dir:" + direction);
         if (getCell(propsTilemap, targetCell))
         {
-            print("test");
+            //Interact();
         }
-        if (getCell(groundTilemap, targetCell))
+        else if (getCell(groundTilemap, targetCell))
             {
                 StartCoroutine(SmoothMovement(targetCell));
             }
