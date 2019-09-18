@@ -15,7 +15,6 @@ using System.Collections;
 
                 //Instantiate gameManager prefab
                 Instantiate(gameManager);
-                print("Test");
 
             //Check if a SoundManager has already been assigned to static variable GameManager.instance or if it's still null
 

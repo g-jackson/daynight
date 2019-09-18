@@ -13,10 +13,15 @@ public class Player : MonoBehaviour {
     private GameObject Props;
     public Tilemap groundTilemap;
     public Tilemap propsTilemap;
+    private Vector2 direction = new Vector2(1, 0);
+    private Animator animator;
+
     // Use this for initialization
     void Start ()
     {
+        animator = GetComponent<Animator>();
     }
+
 
     // Update is called once per frame
     void Update ()
@@ -36,7 +41,7 @@ public class Player : MonoBehaviour {
         else if(Input.GetKey("s")){
           horizontal = -1;
         }
-        else if (Input.GetKey("a")){
+        else if(Input.GetKey("a")){
           vertical = -1;
         }
         else if(Input.GetKey("d")){
@@ -53,50 +58,73 @@ public class Player : MonoBehaviour {
         //If there's a direction, we are trying to move.
         if (horizontal != 0 || vertical != 0)
         {
-            StartCoroutine(actionCooldown(0.2f));
+            StartCoroutine(actionCooldown(moveTime));
             Move(horizontal, vertical);
+        }
+        else if(Input.GetKey("e")){
+            StartCoroutine(actionCooldown(moveTime));
+            Interact();
         }
     }
 
 
-    Vector2 CartesianToIsometric(Vector2 cartPt)
+    private void Interact()
     {
-        Vector2 tempPt=new Vector2();
-        tempPt.x=cartPt.x-cartPt.y;
-        tempPt.y=(cartPt.x+cartPt.y)/2;
-        return (tempPt);
+      Vector2 startCell =  transform.position;
+      Vector2 targetCell = startCell + CartesianToIsometric(direction);
+      if (getCell(propsTilemap, targetCell)){
+          print("Interacting");
+      }
+      else{
+          print("Nothing Found");
+      }
+
     }
 
-
-    Vector2 IsometricToCartesian(Vector2 isoPt)
-    {
-      Vector2 tempPt=new Vector2();
-      tempPt.x=(2*isoPt.y+isoPt.x)/2;
-      tempPt.y=(2*isoPt.y-isoPt.x)/2;
-      return (tempPt);
-    }
 
     private void Move(int xDir, int yDir)
     {
-        Vector2 direction = new Vector2(xDir, yDir);
+        direction = new Vector2(xDir, yDir);
+
         Vector2 startCell =  transform.position;
         Vector2 targetCell = startCell + CartesianToIsometric(direction);
-
-        //print(grid.cellLayout());
-        print("dir:"+ xDir + yDir + "start:" + startCell + "end:" + targetCell);
-
-
-        //If the front tile is a walkable ground tile, the player moves here.
-        if (getCell(groundTilemap, targetCell))
+        //print("movedir:"+ xDir + yDir + "start:" + startCell + "end:" + targetCell + "new_dir:" + direction);
+        if (getCell(propsTilemap, targetCell))
+        {
+            //Interact();
+        }
+        else if (getCell(groundTilemap, targetCell))
             {
-                StartCoroutine(SmoothMovement(targetCell));
+                StartCoroutine(SmoothMovement(targetCell, xDir, yDir));
             }
     }
 
 
-    private IEnumerator SmoothMovement(Vector3 end)
+    private void TriggerAnimtor(int xDir, int yDir){
+        if (xDir == 0 && yDir == 1){
+            animator.SetInteger("state", 1);
+        }
+        else if (xDir == 0 && yDir == -1){
+            animator.SetInteger("state", 4);
+        }
+        else if (xDir == 1 && yDir == 0){
+            animator.SetInteger("state", 3);
+        }
+        else if (xDir == -1 && yDir == 0){
+            animator.SetInteger("state", 2);
+        }
+    }
+
+
+    private void StopAnimtor(){
+        animator.SetInteger("state", -1);
+    }
+
+
+    private IEnumerator SmoothMovement(Vector3 end, int xDir, int yDir)
     {
         isMoving = true;
+        TriggerAnimtor(xDir, yDir);
         float sqrRemainingDistance = (transform.position - end).sqrMagnitude;
         float inverseMoveTime = 1 / moveTime;
 
@@ -108,10 +136,12 @@ public class Player : MonoBehaviour {
 
             yield return null;
         }
+        StopAnimtor();
+
         isMoving = false;
     }
 
-    //Blocked animation
+
     private IEnumerator BlockedMovement(Vector3 end)
     {
         isMoving = true;
@@ -145,20 +175,30 @@ public class Player : MonoBehaviour {
     private IEnumerator actionCooldown(float cooldown)
     {
         onCooldown = true;
-
-        //float cooldown = 0.2f;
         while ( cooldown > 0f )
         {
             cooldown -= Time.deltaTime;
             yield return null;
         }
-
         onCooldown = false;
     }
 
 
-    private void OnTriggerEnter2D(Collider2D coll)
+    Vector2 CartesianToIsometric(Vector2 cartPt)
     {
+        Vector2 tempPt = new Vector2();
+        tempPt.x = cartPt.x - cartPt.y;
+        tempPt.y = (cartPt.x + cartPt.y) / 2;
+        return (tempPt);
+    }
+
+
+    Vector2 IsometricToCartesian(Vector2 isoPt)
+    {
+      Vector2 tempPt = new Vector2();
+      tempPt.x = (2 * isoPt.y + isoPt.x) / 2;
+      tempPt.y = (2 * isoPt.y - isoPt.x) / 2;
+      return (tempPt);
     }
 
 
@@ -166,9 +206,10 @@ public class Player : MonoBehaviour {
     {
         return tilemap.GetTile(tilemap.WorldToCell(cellWorldPos));
     }
+
+
     private bool hasTile(Tilemap tilemap, Vector2 cellWorldPos)
     {
         return tilemap.HasTile(tilemap.WorldToCell(cellWorldPos));
     }
-
 }
