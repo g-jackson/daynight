@@ -14,10 +14,12 @@ public class Player : MonoBehaviour {
     public Tilemap groundTilemap;
     public Tilemap propsTilemap;
     private Vector2 direction = new Vector2(1, 0);
+    private Animator animator;
 
     // Use this for initialization
     void Start ()
     {
+        animator = GetComponent<Animator>();
     }
 
 
@@ -83,6 +85,7 @@ public class Player : MonoBehaviour {
     private void Move(int xDir, int yDir)
     {
         direction = new Vector2(xDir, yDir);
+
         Vector2 startCell =  transform.position;
         Vector2 targetCell = startCell + CartesianToIsometric(direction);
         //print("movedir:"+ xDir + yDir + "start:" + startCell + "end:" + targetCell + "new_dir:" + direction);
@@ -92,14 +95,36 @@ public class Player : MonoBehaviour {
         }
         else if (getCell(groundTilemap, targetCell))
             {
-                StartCoroutine(SmoothMovement(targetCell));
+                StartCoroutine(SmoothMovement(targetCell, xDir, yDir));
             }
     }
 
 
-    private IEnumerator SmoothMovement(Vector3 end)
+    private void TriggerAnimtor(int xDir, int yDir){
+        if (xDir == 0 && yDir == 1){
+            animator.SetInteger("state", 1);
+        }
+        else if (xDir == 0 && yDir == -1){
+            animator.SetInteger("state", 4);
+        }
+        else if (xDir == 1 && yDir == 0){
+            animator.SetInteger("state", 3);
+        }
+        else if (xDir == -1 && yDir == 0){
+            animator.SetInteger("state", 2);
+        }
+    }
+
+
+    private void StopAnimtor(){
+        animator.SetInteger("state", -1);
+    }
+
+
+    private IEnumerator SmoothMovement(Vector3 end, int xDir, int yDir)
     {
         isMoving = true;
+        TriggerAnimtor(xDir, yDir);
         float sqrRemainingDistance = (transform.position - end).sqrMagnitude;
         float inverseMoveTime = 1 / moveTime;
 
@@ -111,6 +136,8 @@ public class Player : MonoBehaviour {
 
             yield return null;
         }
+        StopAnimtor();
+
         isMoving = false;
     }
 
