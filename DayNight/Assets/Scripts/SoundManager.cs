@@ -2,14 +2,7 @@ using UnityEngine.Audio;
 using System;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour {
-
-    /*
-     * AudioManager, contains every Sounds ans music played, in a Sound[] array, same for musics.
-     * AudioManager is Singleton, so any other object can access it to reach the sounds they want to play.
-     *
-     * */
-
+public class SoundManager : MonoBehaviour {
     //Sounds
     public Sound[] sounds;
 
@@ -20,7 +13,7 @@ public class AudioManager : MonoBehaviour {
 
 
     //Singleton pattern
-    public static AudioManager instance;
+    public static SoundManager instance;
 
     void Awake () {
 
@@ -29,13 +22,10 @@ public class AudioManager : MonoBehaviour {
             instance = this;
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             return;
         }
         DontDestroyOnLoad(gameObject);
-
-
-        Screen.SetResolution(1280, 600, false);
 
         //Sound.source is an AudioSource component, it plays the music. For each Sound in sounds[], we
         //initialize there an AudioSource with the value found in the Sound object.
@@ -49,20 +39,14 @@ public class AudioManager : MonoBehaviour {
             s.source.loop = s.loop;
         }
 
-        //Choose a random first music.
-        //num_music = UnityEngine.Random.Range(0, musics.Length);
-
         //We initialize the music the same way than for the sound, but just once this time.
         music.source = gameObject.AddComponent<AudioSource>();
         music.source.clip = musics[num_music].clip;
         music.source.volume = musics[num_music].volume;
         music.source.pitch = musics[num_music].pitch;
         music.source.loop = true;
+        print(music.source.name);
         music.source.Play();
-
-        //Play ocean sound
-        Find("ocean").source.Play();
-
     }
 
     //Return the Sound object with the name given. Used by other objets to access the sounds they want to play.
@@ -132,8 +116,8 @@ public class AudioManager : MonoBehaviour {
     }
 
     //Singleton pattern.
-    //We get the instant of the AudioManager so it can be used by other objects.
-    public static AudioManager getInstance()
+    //We get the instant of the SoundManager so it can be used by other objects.
+    public static SoundManager getInstance()
     {
         return instance;
     }
