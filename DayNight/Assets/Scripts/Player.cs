@@ -89,14 +89,12 @@ public class Player : MonoBehaviour {
         Vector2 startCell =  transform.position;
         Vector2 targetCell = startCell + CartesianToIsometric(direction);
         //print("movedir:"+ xDir + yDir + "start:" + startCell + "end:" + targetCell + "new_dir:" + direction);
-        if (getCell(propsTilemap, targetCell))
-        {
-            //Interact();
+        if (getCell(propsTilemap, targetCell) || !getCell(groundTilemap, targetCell)){
+            StartCoroutine(BlockedMovement(targetCell, xDir, yDir));
         }
-        else if (getCell(groundTilemap, targetCell))
-            {
-                StartCoroutine(SmoothMovement(targetCell, xDir, yDir));
-            }
+        else if (getCell(groundTilemap, targetCell)){
+            StartCoroutine(SmoothMovement(targetCell, xDir, yDir));
+        }
     }
 
 
@@ -142,11 +140,15 @@ public class Player : MonoBehaviour {
     }
 
 
-    private IEnumerator BlockedMovement(Vector3 end)
+    private IEnumerator BlockedMovement(Vector3 end, int xDir, int yDir)
     {
+        //while (isMoving) yield return null;
+
         isMoving = true;
+        TriggerAnimtor(xDir, yDir);
         Vector3 originalPos = transform.position;
-        end = transform.position + ((end - transform.position) / 3);
+
+        end = transform.position + ((end - transform.position) / 4);
         float sqrRemainingDistance = (transform.position - end).sqrMagnitude;
         float inverseMoveTime = (1 / (moveTime*2) );
 
@@ -168,6 +170,7 @@ public class Player : MonoBehaviour {
 
             yield return null;
         }
+        StopAnimtor();
         isMoving = false;
     }
 
