@@ -27,8 +27,7 @@ public class Player : MonoBehaviour {
     void Update ()
     {
         //We do nothing if the player is still moving.
-        if (isMoving || onCooldown)
-        {
+        if (isMoving || onCooldown){
             return;
         }
         //To store move directions.
@@ -71,9 +70,15 @@ public class Player : MonoBehaviour {
     private void Interact()
     {
       Vector2 startCell =  transform.position;
-      Vector2 targetCell = startCell + CartesianToIsometric(direction);
-      if (getCell(propsTilemap, targetCell)){
-          print("Interacting");
+      Vector2 tarGetCell = startCell + CartesianToIsometric(direction);
+      Collider2D coll = CheckTile(tarGetCell);
+      if (coll != null){
+          if (coll.GetComponent("Interactable")){
+              coll.gameObject.GetComponent<Interactable>().Interact();
+          }
+      }
+      else if (GetCell(propsTilemap, tarGetCell)){
+          print("Interacting with non-interactable");
       }
       else{
           print("Nothing Found");
@@ -87,18 +92,22 @@ public class Player : MonoBehaviour {
         direction = new Vector2(xDir, yDir);
 
         Vector2 startCell =  transform.position;
-        Vector2 targetCell = startCell + CartesianToIsometric(direction);
-        //print("movedir:"+ xDir + yDir + "start:" + startCell + "end:" + targetCell + "new_dir:" + direction);
-        if (getCell(propsTilemap, targetCell) || !getCell(groundTilemap, targetCell)){
-            StartCoroutine(BlockedMovement(targetCell, xDir, yDir));
+        Vector2 tarGetCell = startCell + CartesianToIsometric(direction);
+        Collider2D coll = CheckTile(tarGetCell);
+        //print("movedir:"+ xDir + yDir + "start:" + startCell + "end:" + tarGetCell + "new_dir:" + direction);
+        if (coll != null){
+            StartCoroutine(BlockedMovement(tarGetCell, xDir, yDir));
         }
-        else if (getCell(groundTilemap, targetCell)){
-            StartCoroutine(SmoothMovement(targetCell, xDir, yDir));
+        else if (GetCell(propsTilemap, tarGetCell) || !GetCell(groundTilemap, tarGetCell)){
+            StartCoroutine(BlockedMovement(tarGetCell, xDir, yDir));
+        }
+        else if (GetCell(groundTilemap, tarGetCell)){
+            StartCoroutine(SmoothMovement(tarGetCell, xDir, yDir));
         }
     }
 
 
-    private void TriggerAnimtor(int xDir, int yDir){
+    private void TriggerPlayerAnimtor(int xDir, int yDir){
         if (xDir == 0 && yDir == 1){
             animator.SetInteger("state", 1);
         }
@@ -114,7 +123,8 @@ public class Player : MonoBehaviour {
     }
 
 
-    private void StopAnimtor(){
+    private void StopPlayerAnimtor()
+    {
         animator.SetInteger("state", -1);
     }
 
@@ -122,20 +132,18 @@ public class Player : MonoBehaviour {
     private IEnumerator SmoothMovement(Vector3 end, int xDir, int yDir)
     {
         isMoving = true;
-        TriggerAnimtor(xDir, yDir);
+        TriggerPlayerAnimtor(xDir, yDir);
         float sqrRemainingDistance = (transform.position - end).sqrMagnitude;
         float inverseMoveTime = 1 / moveTime;
 
-        while (sqrRemainingDistance > float.Epsilon)
-        {
+        while (sqrRemainingDistance > float.Epsilon){
             Vector3 newPosition = Vector3.MoveTowards(transform.position, end, inverseMoveTime * Time.deltaTime);
             transform.position = newPosition;
             sqrRemainingDistance = (transform.position - end).sqrMagnitude;
 
             yield return null;
         }
-        StopAnimtor();
-
+        StopPlayerAnimtor();
         isMoving = false;
     }
 
@@ -145,15 +153,14 @@ public class Player : MonoBehaviour {
         //while (isMoving) yield return null;
 
         isMoving = true;
-        TriggerAnimtor(xDir, yDir);
+        TriggerPlayerAnimtor(xDir, yDir);
         Vector3 originalPos = transform.position;
 
         end = transform.position + ((end - transform.position) / 4);
         float sqrRemainingDistance = (transform.position - end).sqrMagnitude;
         float inverseMoveTime = (1 / (moveTime*2) );
 
-        while (sqrRemainingDistance > float.Epsilon)
-        {
+        while (sqrRemainingDistance > float.Epsilon){
             Vector3 newPosition = Vector3.MoveTowards(transform.position, end, inverseMoveTime * Time.deltaTime);
             transform.position = newPosition;
             sqrRemainingDistance = (transform.position - end).sqrMagnitude;
@@ -162,15 +169,14 @@ public class Player : MonoBehaviour {
         }
 
         sqrRemainingDistance = (transform.position - originalPos).sqrMagnitude;
-        while (sqrRemainingDistance > float.Epsilon)
-        {
+        while (sqrRemainingDistance > float.Epsilon){
             Vector3 newPosition = Vector3.MoveTowards(transform.position, originalPos, inverseMoveTime * Time.deltaTime);
             transform.position = newPosition;
             sqrRemainingDistance = (transform.position - originalPos).sqrMagnitude;
 
             yield return null;
         }
-        StopAnimtor();
+        StopPlayerAnimtor();
         isMoving = false;
     }
 
@@ -178,8 +184,7 @@ public class Player : MonoBehaviour {
     private IEnumerator actionCooldown(float cooldown)
     {
         onCooldown = true;
-        while ( cooldown > 0f )
-        {
+        while ( cooldown > 0f ){
             cooldown -= Time.deltaTime;
             yield return null;
         }
@@ -205,13 +210,21 @@ public class Player : MonoBehaviour {
     }
 
 
-    private TileBase getCell(Tilemap tilemap, Vector2 cellWorldPos)
+    public Collider2D CheckTile(Vector2 targetPos)
+    {
+        RaycastHit2D hit;
+        hit = Physics2D.Linecast(targetPos, targetPos);
+        return hit.collider;
+    }
+
+
+    private TileBase GetCell(Tilemap tilemap, Vector2 cellWorldPos)
     {
         return tilemap.GetTile(tilemap.WorldToCell(cellWorldPos));
     }
 
 
-    private bool hasTile(Tilemap tilemap, Vector2 cellWorldPos)
+    private bool HasTile(Tilemap tilemap, Vector2 cellWorldPos)
     {
         return tilemap.HasTile(tilemap.WorldToCell(cellWorldPos));
     }
