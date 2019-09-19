@@ -1,58 +1,140 @@
+using UnityEngine.Audio;
+using System;
 using UnityEngine;
-using System.Collections;
 
-    public class SoundManager : MonoBehaviour
-    {
-        public AudioSource efxSource;                    //Drag a reference to the audio source which will play the sound effects.
-        public AudioSource musicSource;                    //Drag a reference to the audio source which will play the music.
-        public static SoundManager instance = null;        //Allows other scripts to call functions from SoundManager.
-        public float lowPitchRange = .95f;                //The lowest a sound effect will be randomly pitched.
-        public float highPitchRange = 1.05f;            //The highest a sound effect will be randomly pitched.
+public class AudioManager : MonoBehaviour {
+
+    /*
+     * AudioManager, contains every Sounds ans music played, in a Sound[] array, same for musics.
+     * AudioManager is Singleton, so any other object can access it to reach the sounds they want to play.
+     *
+     * */
+
+    //Sounds
+    public Sound[] sounds;
+
+    //Musics
+    public Sound[] musics;
+    int num_music = 0;
+    public Sound music;
 
 
-        void Awake ()
+    //Singleton pattern
+    public static AudioManager instance;
+
+    void Awake () {
+
+        //Singleton
+        if (instance == null)
+            instance = this;
+        else
         {
-            //Check if there is already an instance of SoundManager
-            if (instance == null)
-                //if not, set it to this.
-                instance = this;
-            //If instance already exists:
-            else if (instance != this)
-                //Destroy this, this enforces our singleton pattern so there can only be one instance of SoundManager.
-                Destroy (gameObject);
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
 
-            //Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
-            DontDestroyOnLoad (gameObject);
+
+        Screen.SetResolution(1280, 600, false);
+
+        //Sound.source is an AudioSource component, it plays the music. For each Sound in sounds[], we
+        //initialize there an AudioSource with the value found in the Sound object.
+        foreach (Sound s in sounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
         }
 
+        //Choose a random first music.
+        //num_music = UnityEngine.Random.Range(0, musics.Length);
 
-        //Used to play single sound clips.
-        public void PlaySingle(AudioClip clip)
-        {
-            //Set the clip of our efxSource audio source to the clip passed in as a parameter.
-            efxSource.clip = clip;
+        //We initialize the music the same way than for the sound, but just once this time.
+        music.source = gameObject.AddComponent<AudioSource>();
+        music.source.clip = musics[num_music].clip;
+        music.source.volume = musics[num_music].volume;
+        music.source.pitch = musics[num_music].pitch;
+        music.source.loop = true;
+        music.source.Play();
 
-            //Play the clip.
-            efxSource.Play ();
-        }
+        //Play ocean sound
+        Find("ocean").source.Play();
 
-
-        //RandomizeSfx chooses randomly between various audio clips and slightly changes their pitch.
-        public void RandomizeSfx (params AudioClip[] clips)
-        {
-            //Generate a random number between 0 and the length of our array of clips passed in.
-            int randomIndex = Random.Range(0, clips.Length);
-
-            //Choose a random pitch to play back our clip at between our high and low pitch ranges.
-            float randomPitch = Random.Range(lowPitchRange, highPitchRange);
-
-            //Set the pitch of the audio source to the randomly chosen pitch.
-            efxSource.pitch = randomPitch;
-
-            //Set the clip to the clip at our randomly chosen index.
-            efxSource.clip = clips[randomIndex];
-
-            //Play the clip.
-            efxSource.Play();
-        }
     }
+
+    //Return the Sound object with the name given. Used by other objets to access the sounds they want to play.
+    public Sound Find(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound:" + name + " not found!");
+        }
+        return s;
+    }
+
+    //Mute all SFX sounds
+    public void MuteAllSounds()
+    {
+        foreach (Sound s in sounds)
+            s.source.mute = true;
+    }
+
+    //Unmute all sounds
+    /*
+    public void UnMuteAllSounds()
+    {
+        //On vérifie que le jeu n'est pas en pause et que le bouton qui gère l'activation des bruitages est bien allumé.
+        //On ne veut pas que les bruitages continuent d'être joué quand le jeu est en pause.
+        //On ne veut pas que les bruitages reprennent quand on reprend la partie si on les avait coupé.
+        if (!GameManager.getInstance().gamePaused && GameObject.Find("Audio").GetComponent<Buttons_Behaviour>().On)
+        {
+            foreach (Sound s in sounds)
+            {
+                s.source.mute = false;
+            }
+        }
+
+    } */
+
+    //Pause all sounds.
+    public void PauseAll()
+    {
+        foreach (Sound s in sounds)
+            s.source.Pause();
+        music.source.Pause();
+    }
+    //Resume all sounds.
+    public void ResumeAll()
+    {
+        foreach (Sound s in sounds)
+            s.source.UnPause();
+        music.source.UnPause();
+    }
+
+    //Change the music for the next one in the array musics[]
+    public void nextMusic()
+    {
+        if ( musics.Length-1 > num_music )
+            num_music++;
+        else
+            num_music = 0;
+
+        music.source.Stop(); //We stop the previous one.
+        //We replace it with the new one.
+        music.source.clip = musics[num_music].clip;
+        music.source.volume = musics[num_music].volume;
+        music.source.pitch = musics[num_music].pitch;
+        music.source.Play();
+    }
+
+    //Singleton pattern.
+    //We get the instant of the AudioManager so it can be used by other objects.
+    public static AudioManager getInstance()
+    {
+        return instance;
+    }
+}
