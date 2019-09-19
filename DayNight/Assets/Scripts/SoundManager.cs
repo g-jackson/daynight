@@ -45,7 +45,6 @@ public class SoundManager : MonoBehaviour {
         music.source.volume = musics[num_music].volume;
         music.source.pitch = musics[num_music].pitch;
         music.source.loop = true;
-        print(music.source.name);
         music.source.Play();
     }
 

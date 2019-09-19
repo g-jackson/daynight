@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Treasure : Interactable {
 
-
-
     public Sprite openedSprite;
     private bool isClosed = true;
 
