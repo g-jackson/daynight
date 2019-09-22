@@ -8,11 +8,13 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour {
     public bool isMoving = false;
     public bool onCooldown = false;
+    public Tilemap groundTilemap;
+    public Tilemap propsTilemap;
+    public TurnManager turnManager;
+    
     private float moveTime = 0.1f;
     private GameObject GroundTiles;
     private GameObject Props;
-    public Tilemap groundTilemap;
-    public Tilemap propsTilemap;
     private Vector2 direction = new Vector2(1, 0);
     private Animator animator;
 
@@ -59,10 +61,12 @@ public class Player : MonoBehaviour {
         {
             StartCoroutine(actionCooldown(moveTime));
             Move(horizontal, vertical);
+            turnManager.HandleTurn();
         }
         else if(Input.GetKey("e")){
             StartCoroutine(actionCooldown(moveTime));
             Interact();
+            turnManager.HandleTurn();
         }
     }
 
